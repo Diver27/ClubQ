@@ -9,18 +9,18 @@ import javax.persistence.Id;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
     private String username;
-    private String info_text;
-    private int profile_image;
+    private String infoText;
+    private Integer profileImageId;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
@@ -30,19 +30,19 @@ public class User {
         this.username = username;
     }
 
-    public String getInfo_text() {
-        return info_text;
+    public String getInfoText() {
+        return infoText;
     }
 
-    public void setInfo_text(String info_text) {
-        this.info_text = info_text;
+    public void setInfoText(String infoText) {
+        this.infoText = infoText;
     }
 
-    public int getProfile_image() {
-        return profile_image;
+    public Integer getProfileImageId() {
+        return profileImageId;
     }
 
-    public void setProfile_image(int profile_image) {
-        this.profile_image = profile_image;
+    public void setProfileImageId(Integer profileImageId) {
+        this.profileImageId = profileImageId;
     }
 }
