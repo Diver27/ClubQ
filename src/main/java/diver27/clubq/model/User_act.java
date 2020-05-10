@@ -6,12 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Attendance {
+public class User_act {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private Integer eventId;
-    private Integer userId;
+    private Integer act_id;
+    private Integer user_id;
 
     public Integer getId() {
         return id;
@@ -21,19 +21,19 @@ public class Attendance {
         this.id = id;
     }
 
-    public Integer getEventId() {
-        return eventId;
+    public Integer getAct_id() {
+        return act_id;
     }
 
-    public void setEventId(Integer eventId) {
-        this.eventId = eventId;
+    public void setAct_id(Integer act_id) {
+        this.act_id = act_id;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 }
