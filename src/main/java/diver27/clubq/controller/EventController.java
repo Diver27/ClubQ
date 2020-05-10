@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -29,9 +30,21 @@ public class EventController {
         return eventService.getEventsRandom(pageLimit);
     }
 
-    @GetMapping(path = "info")
+    @GetMapping(path = "/info")
     public @ResponseBody
     Optional<Event> getEventInfo(@RequestParam Integer eventId) {
         return eventService.getEventInfo(eventId);
+    }
+
+    @GetMapping(path = "/my_event")
+    public @ResponseBody
+    List<Event> getMyEvent(@RequestParam Integer userId){
+        return eventService.getMyEvent(userId);
+    }
+
+    @GetMapping(path="/search")
+    public @ResponseBody
+    List<Event> searchEvents(@RequestParam String keyword, @RequestParam int head, @RequestParam int pageLimit){
+        return eventService.searchEvents(keyword, head, pageLimit);
     }
 }

@@ -26,4 +26,12 @@ public class EventService {
     public Optional<Event> getEventInfo(Integer id) {
         return eventRepository.findById(id);
     }
+
+    public List<Event> getMyEvent(Integer userId){
+        return eventRepository.findEventsByUserId(userId);
+    }
+
+    public List<Event> searchEvents(String title, int head, int pageLimit){
+        return eventRepository.findEventsByTitle(title, head, pageLimit);
+    }
 }
