@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.List;
 import java.util.Optional;
 
 @Transactional
@@ -24,8 +23,10 @@ public class UserService {
 
     public Optional<User> getUserInfo(Integer userId) {
         return userRepository.findById(userId);
-        //Todo: How to catch?
     }
 
-//    public boolean updateUserInfo(Integer userId, ) Todo: How to get JSON body?
+    public boolean updateUserInfo(Integer userId, String infoText){
+        userRepository.updateInfo(userId,infoText);
+        return true;
+    }
 }
