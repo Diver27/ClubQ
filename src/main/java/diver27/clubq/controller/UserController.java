@@ -31,4 +31,5 @@ public class UserController {
     boolean updateUserInfo(@RequestParam Integer userId, @RequestParam String infoText) {
         return userService.updateUserInfo(userId, infoText);
     }//Todo: Upload profile image.
+
 }
