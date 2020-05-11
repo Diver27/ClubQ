@@ -11,7 +11,7 @@
     <groupId>diver27</groupId>
     <artifactId>clubq</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>clubq</name>
     <description>ClubQ backend</description>
 
